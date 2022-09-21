@@ -1,0 +1,23 @@
+{
+  "name": "tpa-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nilam1910/TPA-backEnd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nilam1910/TPA-backEnd/issues"
+  },
+  "homepage": "https://github.com/Nilam1910/TPA-backEnd#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
