@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Nilam1910/TPA-backEnd#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "mongoose": "^6.6.1"
   }
 }
