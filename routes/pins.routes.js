@@ -1,4 +1,6 @@
 const express = require("express")
 const router = express.Router()
-router.get("/", ctrls.pins.index)
+
+const ctrls= require("../controllers")
+router.get("/pins", ctrls.pins.index)
 module.exports = router;
