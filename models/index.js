@@ -1,3 +1,4 @@
 module.exports={
-   PIN:require("./Pins")
+   Pin:require("./Pins"),
+   Users:require("./Users")
 }

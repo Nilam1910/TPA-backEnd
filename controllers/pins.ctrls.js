@@ -10,7 +10,7 @@ const index = (req, res) => {
             requestedAt: new Date().toLocaleDateString()
          })
       })
-   res.send("Get route is working")
+   
  
 }
 
