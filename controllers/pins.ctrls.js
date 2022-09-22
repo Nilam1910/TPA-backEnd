@@ -10,11 +10,23 @@ const index = (req, res) => {
             requestedAt: new Date().toLocaleDateString()
          })
       })
-   
- 
+}
+
+const create = (req, res) => {
+  res.send('create route')
+}
+
+const destroy = (req, res) => {
+  res.send('destroy route')
+}
+
+const update = (req, res) => {
+  res.send('update route')
 }
 
 module.exports = {
    index,
-   // create,
+   create,
+   destroy,
+   update
 }
