@@ -17,6 +17,10 @@ app.use(express.urlencoded({extended: true}))
 /* == Routes == */
 app.use("/pins", routes.pins)
 
+/* == DB connection == */
+require('./config/db.connection');
+
+
 app.listen (PORT, () => {
     console.log(" Connected! ")
 })
