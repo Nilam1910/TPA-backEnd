@@ -1,4 +1,4 @@
-const db = require("..models")
+const db = require("../models")
 
 // get all the pins
 const index = (req, res) => {
@@ -16,5 +16,5 @@ const index = (req, res) => {
 
 module.exports = {
    index,
-   create,
+   // create,
 }
