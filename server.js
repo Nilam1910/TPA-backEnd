@@ -5,6 +5,8 @@ const app = express()
 /* == Internal Modules == */
 const routes = require('./routes')
 
+require('dotenv').config()
+
 /* == Port == */
 const PORT = process.env.PORT || 3001;
 
