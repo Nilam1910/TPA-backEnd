@@ -36,7 +36,15 @@ const destroy = (req, res) => {
 
 
 const update = (req, res) => {
-  res.send('update route')
+//   res.send('update route')
+   db.Pin.findByIdAndUpdate(req.params.id, 
+      { $set: req.body },
+      { new: true },
+      (err, updatedPin) => {
+         if(err) return res.status(400).json({error: err.message})
+         return res.status(200).json(updatedPin)
+      }
+   )
 }
 
 module.exports = {
