@@ -12,9 +12,24 @@ const index = (req, res) => {
       })
 }
 
+
+
+
 const create = (req, res) => {
+   db.Pin.create(req.body, (error, createdPins) =>{
+      if(error) return res.status(400).json({error: error.message})
+
+      return res.status(200).json(createdPins)
+   })
   res.send('create route')
 }
+
+// Created create route //
+
+
+
+
+
 
 const destroy = (req, res) => {
   res.send('destroy route')
