@@ -12,9 +12,7 @@ const index = (req, res) => {
       })
 }
 
-
-
-
+// create a pin with req.body
 const create = (req, res) => {
    db.Pin.create(req.body, (error, createdPins) =>{
       if(error) return res.status(400).json({error: error.message})
@@ -24,16 +22,18 @@ const create = (req, res) => {
   res.send('create route')
 }
 
-// Created create route //
-
-
-
-
-
-
+// destroy a single pin by its ID
 const destroy = (req, res) => {
-  res.send('destroy route')
+//   res.send('destroy route')
+   db.Pin.findByIdAndDelete(req.params.id, (err, deletedPin) => {
+      if(err) return res.status(400).json({error: error.message})
+      return res.status(200).json({
+         message: `Pin ${deletedPin.name} deleted successfully`
+      })
+   })
 }
+// Created destroy route //
+
 
 const update = (req, res) => {
   res.send('update route')

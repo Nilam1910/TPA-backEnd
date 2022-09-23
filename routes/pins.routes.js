@@ -9,4 +9,4 @@ router.delete("/:id", ctrls.pins.destroy)
 router.put("/:id", ctrls.pins.update)
 module.exports = router;
 
-// router.post('/', ctrls.holidays.create);
+
