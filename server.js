@@ -5,12 +5,16 @@ const app = express()
 /* == Internal Modules == */
 const routes = require('./routes')
 
+/* == Bcrypt == */
+const bcrypt = require('bcrypt')
+
 require('dotenv').config()
 
 /* == Port == */
 const PORT = process.env.PORT || 3001;
 
 app.use("/pins", routes.pins)
+app.use("/users", routes.users)
 
 /* == Middleware == */
 app.use(express.json())
