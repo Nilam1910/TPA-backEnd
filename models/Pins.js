@@ -9,8 +9,9 @@ const pinSchema = new mongoose.Schema({
   latitude: { type: Number, required: true },
   image: {type: Buffer, required: true},
   imageType: {type: String, required: true},
+},
   { timestamps: true }
-})
+)
 
 const Pin = mongoose.model('Pin', pinSchema)
 
