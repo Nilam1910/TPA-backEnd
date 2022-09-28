@@ -2,6 +2,7 @@ const db = require("../models")
 
 // get all the pins
 const index = (req, res) => {
+   // res.send("Get route is working")
    db.Pin.find({}, (err,
       pins) => {
          if(err) return res.status(404).json({error: err.message})
