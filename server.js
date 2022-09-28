@@ -11,7 +11,7 @@ const bcrypt = require('bcrypt')
 //import cors
 const cors = require('cors')
 // whitelist & corsOptions
-const whitelist = ['http://localhost:3000']
+const whitelist = ['http://localhost:3001']
 const corsOptions = {
     origin: function (origin, callback) {
         if (whitelist.indexOf(origin) !== -1) {
