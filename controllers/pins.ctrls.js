@@ -38,8 +38,17 @@ const destroy = (req, res) => {
 
 const update = (req, res) => {
 //   res.send('update route')
-   db.Pin.findByIdAndUpdate(req.params.id, 
-      { $set: req.body },
+   db.Pin.findByIdAndUpdate(req.params.id,
+      { $set:
+        {
+          username: req.body.username,
+          title: req.body.title,
+          description: req.body.description,
+          rating: req.body.rating,
+          longitude: req.body.longitude,
+          latitude: req.body.latitude,
+        }
+      },
       { new: true },
       (err, updatedPin) => {
          if(err) return res.status(400).json({error: err.message})

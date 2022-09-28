@@ -10,29 +10,18 @@ const bcrypt = require('bcrypt')
 
 //import cors
 const cors = require('cors')
-// whitelist & corsOptions
-const whitelist = ['http://localhost:3001']
-const corsOptions = {
-    origin: function (origin, callback) {
-        if (whitelist.indexOf(origin) !== -1) {
-            callback(null, true)
-        } else {
-            callback(new Error('Not allowed by CORS'))
-        }
-    }
-}
 
 require('dotenv').config()
 
 /* == Port == */
-const PORT = process.env.PORT || 3001;
+const PORT = 3001;
 
 /* == Routes == */
 app.use("/pins", routes.pins)
 app.use("/users", routes.users)
 
 /* == Middleware == */
-app.use(cors(corsOptions))
+app.use(cors("*"))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
