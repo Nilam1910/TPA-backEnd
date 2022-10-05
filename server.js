@@ -20,7 +20,7 @@ const cors = require('cors')
 require('dotenv').config()
 
 /* == Port == */
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3001;
 
 /* == Session Secret == */
 const SESSION_SECRET = process.env.SESSION_SECRET
