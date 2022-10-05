@@ -36,9 +36,6 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 /* == Routes == */
-router.get('/', (req, res) => {
-  res.send('working')
-})
 app.use("/pins", routes.pins)
 app.use("/users", routes.users)
 
