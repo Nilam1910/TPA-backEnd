@@ -5,6 +5,9 @@ const app = express()
 /* == Internal Modules == */
 const routes = require('./routes')
 
+/* == method override == */
+const methodOverride  = require('method-override')
+
 /* == Bcrypt == */
 const bcrypt = require('bcrypt')
 

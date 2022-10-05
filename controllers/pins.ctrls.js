@@ -16,11 +16,10 @@ const index = (req, res) => {
 // create a pin with req.body
 const create = (req, res) => {
    db.Pin.create(req.body, (error, createdPins) =>{
+     console.log(error)
       if(error) return res.status(400).json({error: error.message})
-
       return res.status(200).json(createdPins)
    })
-  res.send('create route')
 }
 
 // destroy a single pin by its ID
