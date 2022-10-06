@@ -17,16 +17,16 @@ const register = (req, res) => {
 
 
 const signin = (req, res) => {
-  db.User.find({username: req.body.username}, (err, foundUser) => {
+  console.log(req.body)
+  db.User.findOne({username: req.body.username}, (err, foundUser) => {
     if(foundUser) {
+      console.log(foundUser)
       const validLogin = bcrypt.compareSync(req.body.password, foundUser.password)
       if (validLogin) {
-        req.session.currentUser = foundUser
+        res.json(foundUser)
     } else {
       res.send('Invalid username or password')
     }
-  } else {
-    res.send('Invalid username or password')
   }
   })
 }

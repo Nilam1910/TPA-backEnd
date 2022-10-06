@@ -37,6 +37,7 @@ const destroy = (req, res) => {
 
 const update = (req, res) => {
 //   res.send('update route')
+  console.log(req)
    db.Pin.findByIdAndUpdate(req.params.id,
       { $set:
         {
