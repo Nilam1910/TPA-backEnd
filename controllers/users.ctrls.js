@@ -14,8 +14,6 @@ const register = (req, res) => {
   })
 }
 
-
-
 const signin = (req, res) => {
   console.log(req.body)
   db.User.findOne({username: req.body.username}, (err, foundUser) => {
@@ -40,5 +38,6 @@ const signout = (req, res) => {
 module.exports = {
    register,
    signin,
-   signout
+   signout,
+   
 }

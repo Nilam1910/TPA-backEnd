@@ -20,7 +20,7 @@ const cors = require('cors')
 require('dotenv').config()
 
 /* == Port == */
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001 
 
 /* == Session Secret == */
 const SESSION_SECRET = process.env.SESSION_SECRET
@@ -31,7 +31,9 @@ app.use(session({
 }))
 
 /* == Middleware == */
+
 app.use(cors("*"))
+// app.use(express.static(path.join(__dirname,'public')))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
